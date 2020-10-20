@@ -1,5 +1,6 @@
 const express = require("express");
 const db = require("./db/repository-wrapper");
+//db.movies.
 const cors = require("cors");
 
 const updateRoute = require("./routes/UpdateMovie");
@@ -15,3 +16,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/update/", updateRoute);
+app.get("/api/movies/",(req, res) =>{
+    res.send("hello");
+})
